@@ -63,7 +63,6 @@ planeBack.rotate(angle = 2 * pi / 4,
                   axis = vector(1, 0, 0))
 
 
-scene.camera.pos = vector (0.0, 1.5, 2.0)
 
 
 def collisionY(c, pt, pb):
@@ -98,6 +97,7 @@ go = True
 
 while(go):
     rate(200)
+    scene.camera.pos = vector (cube.pos.x, cube.pos.y, cube.pos.z + 6)
     if(collisionY(cube, planeTop, planeBtm)):
         ySign = ySign * -1
     elif(collisionX(cube, planeLeft, planeRight)):
